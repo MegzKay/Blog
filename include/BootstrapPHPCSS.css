@@ -1,0 +1,54 @@
+body{
+    background: #c7c7c7;
+    
+}
+.container{
+    min-height:700px;
+    background: #fff;
+}
+
+textarea{
+    margin-left:15px;
+    border-radius:5px;
+}
+/*ALL PAGES*/
+.heading{
+    text-align: center;
+    margin-bottom: 30px;
+	margin-top: 50px;
+}
+/*HOME PAGE*/
+.welcome{
+	text-align: center;
+}
+a:link{
+	color:black;
+}
+a:hover{
+	color:red;
+	text-decoration:none;
+}
+a:visited{
+	color:purple;
+}
+/*POSTS*/
+.post{
+	border: 1px solid silver;
+	margin-bottom:50px;
+	text-align:center;
+}
+.title{
+	
+}
+.posttext{
+	text-align:left;
+	padding: 20px 30px; 
+}
+.date{
+	text-align:right;
+	margin-right: 20px;
+}
+.img{
+	width:200px;
+	height:200px;
+}
