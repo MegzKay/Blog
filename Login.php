@@ -67,13 +67,13 @@ function checkPassword($obDB,$password, $id)
 function display($error="")
 {
 	$display = new BootstrapDisplay();
-	$display->pageHead("Blog", "<link rel='stylesheet' href='include/BootstrapPHPCSS.css'>");
+	$display->pageHead("Blog", "<link rel='stylesheet' href='/PHPFiles/Blog/include/BootstrapPHPCSS.css'>");
 
 	$nav = new BootstrapNav($otherClasses="",$inverse=true); 
 	$aLinks = array(
-		array("link"=>"HomePage.php","label"=>"Home"),
-		array("link"=>"Blog.php","label"=>"Blog"),
-		array("link"=>"CreatePost.php","label"=>"Create Post"),
+		array("link"=>"/PHPFiles/Blog/HomePage.php","label"=>"Home"),
+		array("link"=>"/PHPFiles/Blog/Blog.php","label"=>"Blog"),
+		array("link"=>"/PHPFiles/Blog/CreatePost.php","label"=>"Create Post"),
 	);
 	$nav->addLinks($aLinks);
 	$logInOut = $nav->getLogInOutButton(isset($_SESSION["user"]), "login.php", "logout.php"); 
@@ -124,7 +124,7 @@ else if(isset($_POST["username"]) && isset($_POST["password"]))
         if($validPassword)
         {
             $_SESSION["user"] = $id;
-			header("location:Home.php");
+			header("location:HomePage.php");
         }
     }
     if($id==0 || !$validPassword)

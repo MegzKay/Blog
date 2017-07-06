@@ -1,6 +1,6 @@
 <?php
 
-include("connectionDetails.php");
+include("DBConnectionInfo.php");
 define("DATE_TYPE",10);
 define("VAR_CHAR_TYPE",253);
 /**
@@ -168,10 +168,7 @@ class DBFunctions {
     }
 	/**
      * Function 
-     * Purpose  This routine exists soley to figure out the various types that 
-     *          we are working with when trying to do an insert. This routine
-     *          requires that we run an empty Select call against the backend
-     *          database to determine the field types
+     * Purpose  This function will get all Field Information and put it into aFieldObjects
      * @param STRING $sTableName - name of the table
      */
     protected function getTableFieldInfo($sTableName)
@@ -186,7 +183,7 @@ class DBFunctions {
     /**
      * Function getPrimeKey
      * Purpose Returns the lastest primary key from an insert query
-     * @return INT primaryKey
+     * @return INT primaryKey - the primary key of the last entry
      */
     public function getPrimeKey()
     {
@@ -200,10 +197,8 @@ class DBFunctions {
 	
 	/*
 	 * Function sanitize
-	 * Purpose  This routine will be used to sanitize a text string that is being 
-	 *          passed in - essentiall if quotes have not been escaped in the string 
-	 *          thay is being passed in - they will be escaped by this function
-	 * Params   sTarget
+	 * Purpose  This function sanitizes a string before putting into the database
+	 * @params  STRING sTarget - the name of the input
 	 */
 	function sanitize($sTarget)
 	{

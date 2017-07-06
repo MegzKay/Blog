@@ -93,7 +93,7 @@ class BootstrapForm
         $formControl= "<div class='form-group'>"
                 . "<label class='col-sm-offset-1 control-label col-sm-2'>"
                 . "$sLabel</label>"
-                . "<textarea cols='$cols' rows=$rows"
+                . "<textarea cols='$cols' rows='$rows'"
                 . "id='$sName' name='$sName' $sOptions></textarea>"
                 . "</div>";
         

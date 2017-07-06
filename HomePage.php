@@ -8,14 +8,14 @@ include_once("include/BootstrapNav.php");
 
 
 $display = new BootstrapDisplay();
-$display->pageHead("Blog", "<link rel='stylesheet' href='include/BootstrapPHPCSS.css'>");
+	$display->pageHead("Blog", "<link rel='stylesheet' href='/PHPFiles/Blog/include/BootstrapPHPCSS.css'>");
 
 $nav = new BootstrapNav($otherClasses="",$inverse=true);
-$aLinks = array(
-	array("link"=>"HomePage.php","label"=>"Home"),
-	array("link"=>"Blog.php","label"=>"Blog"),
-	array("link"=>"CreatePost.php","label"=>"Create Post"),
-);
+	$aLinks = array(
+		array("link"=>"/PHPFiles/Blog/HomePage.php","label"=>"Home"),
+		array("link"=>"/PHPFiles/Blog/Blog.php","label"=>"Blog"),
+		array("link"=>"/PHPFiles/Blog/CreatePost.php","label"=>"Create Post"),
+	);
 $nav->addLinks($aLinks);
 $logInOut = $nav->getLogInOutButton(isset($_SESSION["user"]), "login.php", "logout.php"); 
 $signUp=$nav->getSignupButton("signup.php"); 
